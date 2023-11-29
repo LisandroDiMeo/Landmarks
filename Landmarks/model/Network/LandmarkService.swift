@@ -12,7 +12,7 @@ struct LandmarkService {
     // For simplicity we directly build the request here,
     // but perhaps for a more complex scenario
     // we should abstract the request building, and only let the
-    // user specify what resource it needs. 
+    // user specify what resource it needs.
     func fetchLandmarks() async -> [Landmark] {
         return await withCheckedContinuation { continuation in
             AF
@@ -27,7 +27,6 @@ struct LandmarkService {
                         continuation.resume(returning: [])
                     }
                 }
-            
         }
     }
 }
