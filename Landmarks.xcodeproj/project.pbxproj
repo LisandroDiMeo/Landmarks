@@ -17,6 +17,11 @@
 		70328D042B11159100BC9A48 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70328D032B11159100BC9A48 /* MapKit.framework */; };
 		703857332B1119470023231E /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703857312B1119460023231E /* CircleImage.swift */; };
 		703857342B1119470023231E /* ParkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703857322B1119470023231E /* ParkView.swift */; };
+		7057A7A42B177B2300F0CB11 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7057A7A32B177B2300F0CB11 /* Alamofire */; };
+		7057A7A82B178B4000F0CB11 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7057A7A72B178B4000F0CB11 /* LandmarkService.swift */; };
+		70928A382B168C5B00870DC7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928A372B168C5B00870DC7 /* Route.swift */; };
+		70928A3A2B168D4B00870DC7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928A392B168D4B00870DC7 /* HomeScreen.swift */; };
+		70928A3C2B168D9300870DC7 /* NavigationGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928A3B2B168D9200870DC7 /* NavigationGraph.swift */; };
 		70A787652B16304C00B15B22 /* LandmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A787642B16304C00B15B22 /* LandmarkListViewModel.swift */; };
 		70F21B5D2B10EBFB00429F23 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F21B5C2B10EBFB00429F23 /* LandmarksApp.swift */; };
 		70F21B5F2B10EBFB00429F23 /* LandmarkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F21B5E2B10EBFB00429F23 /* LandmarkDetails.swift */; };
@@ -35,6 +40,10 @@
 		70328D032B11159100BC9A48 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		703857312B1119460023231E /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		703857322B1119470023231E /* ParkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkView.swift; sourceTree = "<group>"; };
+		7057A7A72B178B4000F0CB11 /* LandmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkService.swift; sourceTree = "<group>"; };
+		70928A372B168C5B00870DC7 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		70928A392B168D4B00870DC7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		70928A3B2B168D9200870DC7 /* NavigationGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGraph.swift; sourceTree = "<group>"; };
 		70A787642B16304C00B15B22 /* LandmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewModel.swift; sourceTree = "<group>"; };
 		70F21B592B10EBFB00429F23 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F21B5C2B10EBFB00429F23 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
@@ -50,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70328D042B11159100BC9A48 /* MapKit.framework in Frameworks */,
+				7057A7A42B177B2300F0CB11 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,8 +69,8 @@
 		700A427D2B14D597004A47DA /* model */ = {
 			isa = PBXGroup;
 			children = (
-				700A427E2B14D5B6004A47DA /* Landmark.swift */,
-				700A42962B14D7AF004A47DA /* Coordinates.swift */,
+				7057A7A92B17B15F00F0CB11 /* DataSource */,
+				7057A7A62B1788C600F0CB11 /* Network */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -68,8 +78,8 @@
 		700A42982B14D842004A47DA /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				700A42992B14D856004A47DA /* LandmarkRepository.swift */,
-				700A429B2B14D88B004A47DA /* JsonFileLoader.swift */,
+				700A427E2B14D5B6004A47DA /* Landmark.swift */,
+				700A42962B14D7AF004A47DA /* Coordinates.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -77,6 +87,7 @@
 		700A429D2B14DA0D004A47DA /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				70A787662B16439B00B15B22 /* Navigation */,
 				70A787602B16244A00B15B22 /* UI */,
 				70F21B5C2B10EBFB00429F23 /* LandmarksApp.swift */,
 			);
@@ -89,6 +100,23 @@
 				70328D032B11159100BC9A48 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7057A7A62B1788C600F0CB11 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7057A7A72B178B4000F0CB11 /* LandmarkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7057A7A92B17B15F00F0CB11 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				700A42992B14D856004A47DA /* LandmarkRepository.swift */,
+				700A429B2B14D88B004A47DA /* JsonFileLoader.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		70A787602B16244A00B15B22 /* UI */ = {
@@ -126,6 +154,16 @@
 				70F21B5E2B10EBFB00429F23 /* LandmarkDetails.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		70A787662B16439B00B15B22 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				70928A372B168C5B00870DC7 /* Route.swift */,
+				70928A392B168D4B00870DC7 /* HomeScreen.swift */,
+				70928A3B2B168D9200870DC7 /* NavigationGraph.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		70F21B502B10EBFB00429F23 = {
@@ -183,6 +221,9 @@
 			dependencies = (
 			);
 			name = Landmarks;
+			packageProductDependencies = (
+				7057A7A32B177B2300F0CB11 /* Alamofire */,
+			);
 			productName = Landmarks;
 			productReference = 70F21B592B10EBFB00429F23 /* Landmarks.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 70F21B502B10EBFB00429F23;
+			packageReferences = (
+				7057A7A22B177B2300F0CB11 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 70F21B5A2B10EBFB00429F23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,9 +288,13 @@
 				70F21B5D2B10EBFB00429F23 /* LandmarksApp.swift in Sources */,
 				703857342B1119470023231E /* ParkView.swift in Sources */,
 				70A787652B16304C00B15B22 /* LandmarkListViewModel.swift in Sources */,
+				70928A3C2B168D9300870DC7 /* NavigationGraph.swift in Sources */,
+				70928A3A2B168D4B00870DC7 /* HomeScreen.swift in Sources */,
+				7057A7A82B178B4000F0CB11 /* LandmarkService.swift in Sources */,
 				700A42A12B14DE29004A47DA /* LandmarksList.swift in Sources */,
 				700A42972B14D7AF004A47DA /* Coordinates.swift in Sources */,
 				703857332B1119470023231E /* CircleImage.swift in Sources */,
+				70928A382B168C5B00870DC7 /* Route.swift in Sources */,
 				700A427F2B14D5B6004A47DA /* Landmark.swift in Sources */,
 				700A429F2B14DB70004A47DA /* LandmarkRow.swift in Sources */,
 			);
@@ -388,7 +436,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -428,7 +476,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -466,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7057A7A22B177B2300F0CB11 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7057A7A32B177B2300F0CB11 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7057A7A22B177B2300F0CB11 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 70F21B512B10EBFB00429F23 /* Project object */;
 }

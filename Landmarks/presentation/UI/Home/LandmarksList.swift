@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LandmarksList: View {
-    @ObservedObject
+    @StateObject
     var viewModel = LandmarkListViewModel()
     
     var body: some View {

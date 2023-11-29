@@ -9,8 +9,7 @@ import Foundation
 
 struct LandmarkRepository {
     func fetchLandmarks() async -> [Landmark] {
-        sleep(2)
-        return JsonFileLoader().load(filename: "landmarkData.json")
+        await LandmarkService().fetchLandmarks()
     }
     
 }
